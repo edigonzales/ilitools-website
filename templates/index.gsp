@@ -2,7 +2,7 @@
 
     <%include "menu.gsp"%>
 
-    <h1 style="margin: 0px; font-weight:700; font-size:4rem; text-align:center; padding-top:50px;">ilitools</h1>
+    <h1 style="margin: 0px; font-weight:700; font-size:6rem; text-align:center; padding-top:50px;">ilitools</h1>
     <div style="font-size:1.2rem; text-align:center; padding-bottom:50px;">Die INTERLIS-Werkzeugfamilie.</div>
 
         <div class="grid-container">
@@ -16,7 +16,7 @@
                             </div>
                             <div class="subgrid-child">
                                 <div class="grid-item-title">Download</div>
-                                 <div style="text-align:justify;">Lade die verschiedenen ili2db-Varianten und ilivalidator herunter.</div>
+                                 <div style="text-align:justify;">Lade die verschiedenen ili2db-Varianten, ilivalidator, ili2c und INTERLIS-UML-Editor herunter.</div>
                             </div>
                         </div>
                     </div>
