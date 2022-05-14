@@ -32,7 +32,7 @@
                             </div>
                             <div class="subgrid-child">
                                 <div class="grid-item-title">Dokumentation</div>
-                                <div style="text-align:justify;">Links zu den Benutzerhandbüchern, Cookbooks, Informationen zu den neusten Funktionen und weiterführender Doku.</div>
+                                <div style="text-align:justify;">Links zu den Benutzerhandbüchern, Cookbooks, Informationen zu den neusten Funktionen und weiterführender Dokumentation.</div>
                             </div>
                         </div>
                     </div>
