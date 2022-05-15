@@ -9,8 +9,14 @@ body {
   font-size: 1rem !important;
 }
 
+h1, h2 {
+  font-weight: 700;
+  color: rgb(36, 38, 43) !important; 
+}
 
-
+.sect1 + .sect1 {
+  border-top: 0px double #ebebeb !important; 
+}
 
 a.feature {
   display:block;
@@ -50,6 +56,7 @@ a.feature:hover {
   background-color: rgba(237, 237, 237, 0.3);
   /*background-color: rgb(1, 68, 136);*/
   transition: box-shadow .3s;
+  height: 240px;
 }
 
 .grid-item:hover {

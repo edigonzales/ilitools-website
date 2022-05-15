@@ -13,10 +13,10 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>index.html">Home</a></li>
-            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>about.html">Download</a></li>
+            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>download.html">Download</a></li>
             <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>about.html">Dokumentation</a></li>
             <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>about.html">Community</a></li>
-            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>about.html">Development</a></li>
+            <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>about.html">(Weiter-)Entwicklung</a></li>
             <!--
             <li><a href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>${config.feed_file}">Subscribe</a></li>
             <li class="dropdown">

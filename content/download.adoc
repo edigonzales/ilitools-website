@@ -1,0 +1,116 @@
+= Download
+Jonathan Bullock
+#2021-05-14
+:jbake-type: page
+:jbake-tags: download
+:jbake-status: published
+:idprefix:
+
+== ili2db
+
+The binary distribution runs on Windows, Linux and Mac and only requires a Java Runtime Environment (JRE) 8 and above to run. Erläutern was die Pakete sollen und dass sie wohl nur für bestimmte Betriebssystemversionen ist.
+
+
+[options="header"]
+|===
+|Version |Variante |Jar |Windows |macOS |Debian | Release Notes
+|v4.8.0 |ili2pg |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[zip] |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[exe] |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[pkg] |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[deb] |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.7[Changelog]
+|v4.8.0 |ili2gpkg |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[zip] |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[exe] |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[pkg] |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[deb] |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.7[Changelog]
+|===
+
+TODO: Link auf die Snapshot ("Entwickler") Versionen.
+
+[options="header"]
+|===
+|Version |ili2pg |ili2gpkg |ili2h2gis |ili2fgdb |ili2mysql |ili2mssql |ili2ora |Release Notes
+|v4.8.0 |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[Zip] 72.3MB  |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[Zip] 72.3MB |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[Zip] 72.3MB  |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[Zip] 72.3MB |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[Zip] 72.3MB  |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[Zip] 72.3MB |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[Zip] 72.3MB  |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.7[Changelog]
+|===
+
+
+[options="header"]
+|===
+|Version |SHA1 |Download Link |Release Notes
+|v2.6.7 |fd07b833104f2889fde9a07d0c0bf09f0fdecbf6 |https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip[GitHub] 72.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.7[Changelog]
+|===
+
+
+
+== SDKMAN
+
+You can also install JBake via http://sdkman.io/[SDKMAN] (Software Development Kit Manager - formerly known as GVM) if you are running a Bash based platform (Mac OSX, Unix, Linux, Cygwin or Solaris etc.).
+SDKMAN will take care of downloading the latest distribution, installing it and configuring your environment for you.
+
+After you have SDKMAN installed enter the following command to install the latest version of JBake:
+
+----
+$ sdk install jbake
+----
+
+Once complete you can then get baking!
+
+== Homebrew
+
+You can also install JBake via http://brew.sh/[Homebrew] if you are running OS X. After you have installed Homebrew enter the following command to install the
+latest version of JBake:
+
+----
+$ brew install jbake
+----
+
+Once complete you can then get baking!
+
+== Docker
+
+An official https://hub.docker.com/r/jbake/jbake[Docker image] is available if you would prefer to run JBake in a Docker container. To execute a bake using the Docker image run the following command from your project folder:
+
+----
+$ docker run --rm -u jbake -v "$PWD":/mnt/site jbake/jbake:latest
+----
+
+This command will execute using the jbake user to avoid running as root and will mount the current working directory as /mnt/site in the Docker container where
+JBake is expecting your project files to be. By default the Docker image will execute a bake (-b) only. If you want to bake and serve your project using the Docker
+image then you'll need to override the default command:
+
+----
+$ docker run --rm -u jbake -v "$PWD":/mnt/site -p 8820:8820 jbake/jbake:latest -b -s
+----
+
+This command will also expose port 8820 from the container, however you will also need to set the https://jbake.org/docs/latest/#default_hostname_for_server_mode[default hostname]
+in your jbake.properties file.
+
+== Maven
+
+JBake artifacts are available from the Maven central repository:
+
+[source,xml]
+----
+<dependency>
+	<groupId>org.jbake</groupId>
+	<artifactId>jbake-core</artifactId>
+	<version>${jbakeVersion}</version>
+</dependency>
+----
+
+NOTE: When using the core library make sure you declare the https://jbake.org/docs/latest/#use_as_library[optional dependencies] you require.
+
+== Archived Distributions
+
+[options="header"]
+|===
+|Version |SHA1 |Download Link |Release Notes
+|v2.6.6 |42240ddf03111fa74cd8be6198b917bdac23a462 |https://github.com/jbake-org/jbake/releases/download/v2.6.6/jbake-2.6.6-bin.zip[GitHub] 71.6MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.6[Changelog]
+|v2.6.5 |c7eadd00afc768383a7b1482fdefa3cba180cdf1 |https://github.com/jbake-org/jbake/releases/download/v2.6.5/jbake-2.6.5-bin.zip[GitHub] 69.32MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.5[Changelog]
+|v2.6.4 |df6926721202e036f84079b830859d176a2c1a32 |https://github.com/jbake-org/jbake/releases/download/v2.6.4/jbake-2.6.4-bin.zip[GitHub] 53.34MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.4[Changelog]
+|v2.6.3 |4f661742db1bb82d24ee370d387e8c77f2d2d57d |https://github.com/jbake-org/jbake/releases/download/v2.6.3/jbake-2.6.3-bin.zip[GitHub] 52.8MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.3[Changelog]
+|v2.6.2 |4244352c489813a4cf6e342a44d49a0e3c515811 |https://github.com/jbake-org/jbake/releases/download/v2.6.2/jbake-2.6.2-bin.zip[GitHub] 52.72MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.2[Changelog]
+|v2.6.1 |ba29c2fbf4090042fc8ffb16165255680621cb32 |https://github.com/jbake-org/jbake/releases/download/v2.6.1/jbake-2.6.1-bin.zip[GitHub] 53.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.1[Changelog]
+|v2.6.0 |7bfc0760d826b608793b6d4e90db4dd5198bc37d |https://github.com/jbake-org/jbake/releases/download/v2.6.0/jbake-2.6.0-bin.zip[GitHub] 69MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.6.0[Changelog]
+|v2.5.1 |91c00c4eb94a25ca11b6f72792e8ed02707f57bc |https://github.com/jbake-org/jbake/releases/download/v2.5.1/jbake-2.5.1-bin.zip[GitHub] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.1[Changelog]
+|v2.5.0 |e563aa423f362237c268d20dd67b00fa0e9c6719 |https://github.com/jbake-org/jbake/releases/download/v2.5.0/jbake-2.5.0-bin.zip[GitHub] 40MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.5.0[Changelog]
+|v2.4.0 |e53633c6cd6ba714a8876cadc02fe41e7790c5db |https://github.com/jbake-org/jbake/releases/download/v2.4.0/jbake-2.4.0-bin.zip[GitHub] 39.1MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.4.0[Changelog]
+|v2.3.2 |8daa2603b0277ee92ba216cf1d7e2d706f489382 |https://github.com/jbake-org/jbake/releases/download/v2.3.2/jbake-2.3.2-bin.zip[GitHub] 65.3MB |https://github.com/jbake-org/jbake/issues?q=milestone%3Av2.3.2+is%3Aclosed[Changelog]
+|v2.3.1 |b429a89a66c021a70394e0207d71a703de58d85b |https://github.com/jbake-org/jbake/releases/download/v2.3.1/jbake-2.3.1-bin.zip[GitHub] 42.4MB |https://github.com/jbake-org/jbake/issues?milestone=8&state=closed[Changelog]
+|v2.3.0 |ea4c676ca59a9dcdc84727410ab01c88c21ec917 |https://github.com/jbake-org/jbake/releases/download/v2.3.0/jbake-2.3.0-bin.zip[GitHub] 41.6MB |https://github.com/jbake-org/jbake/issues?milestone=3&state=closed[Changelog]
+|v2.2.1 |0e225ab850cb98b7451082f818e991c1cfb7defb |https://github.com/jbake-org/jbake/releases/download/v2.2.1/jbake-2.2.1-bin.zip[GitHub] 27.5MB |https://github.com/jbake-org/jbake/issues?milestone=7&state=closed[Changelog]
+|v2.2.0 |fe8d557a562ef9da2b9fea092ac7b5ab524a69db |https://github.com/jbake-org/jbake/releases/download/v2.2.0/jbake-2.2.0-bin.zip[GitHub] 27.1MB |https://github.com/jbake-org/jbake/issues?milestone=2&state=closed[Changelog]
+|===

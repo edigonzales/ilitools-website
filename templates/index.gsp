@@ -7,7 +7,7 @@
 
         <div class="grid-container">
 
-            <a class="feature" href="blog/ilivalidator-web-service/index.html">
+            <a class="feature" href="download.html">
                 <div class="grid-item">
                     <div class="grid-item-paragraph">
                         <div class="subgrid-container">
@@ -72,7 +72,7 @@
             </a>
         </div>
 
-
+<!--
     <div class="page-header">
         <h1>Blog</h1>
     </div>
@@ -85,5 +85,6 @@
     <hr />
     
     <p>Older posts are available in the <a href="${content.rootpath}${config.archive_file}">archive</a>.</p>
+-->
 
 <%include "footer.gsp"%>
