@@ -19,6 +19,7 @@ The binary distribution runs on Windows, Linux and Mac and only requires a Java 
 |===
 
 TODO: Link auf die Snapshot ("Entwickler") Versionen.
+TODO: In Doku zeigen wo/wie man Java installiert.
 
 [options="header"]
 |===
