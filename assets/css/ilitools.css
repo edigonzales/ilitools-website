@@ -9,6 +9,11 @@ body {
   font-size: 1rem !important;
 }
 
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link {
+  color: rgb(36, 38, 43) !important;
+  text-decoration: none;
+}
+
 h1, h2 {
   font-weight: 700;
   color: rgb(36, 38, 43) !important; 
