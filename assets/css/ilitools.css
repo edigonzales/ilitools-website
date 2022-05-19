@@ -23,6 +23,15 @@ h1, h2 {
   border-top: 0px double #ebebeb !important; 
 }
 
+code, kbd, pre, samp {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 17px !important;
+}
+
+table {
+  margin-top: 1.25em;
+}
+
 a.feature {
   display:block;
   /*background-color: #ccc;*/
@@ -32,7 +41,6 @@ a.feature {
   margin-bottom:1px;*/
 }
 
-      
 a.feature:hover {
   /*background-color: #ddd;*/
 }

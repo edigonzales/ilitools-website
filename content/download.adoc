@@ -17,7 +17,11 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 |===
 
 === Docker
-Kurz etwas zu den Docker-Images sagen. Verweis auf Doku, weil hier Aufruf (Verzeichnis mounten) bissle komplizierter ist.
+Kurz etwas zu den https://hub.docker.com/repository/docker/sogis/ili2db[Docker-Images] sagen. Verweis auf Doku, weil hier Aufruf (Verzeichnis mounten) bissle komplizierter ist.
+
+----
+docker run -v $(pwd):/data sogis/ili2db:4.8.0 ili2gpkg --dbfile /data/2549.gpkg --models SO_Nutzungsplanung_20171118 --disableValidation --doSchemaImport --import /data/2549.xtf
+----
 
 === Entwickler-Versionen
 Hier kann man auf die Snapshots verweisen.
