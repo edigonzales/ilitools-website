@@ -26,6 +26,7 @@ h1, h2 {
 code, kbd, pre, samp {
   font-family: 'JetBrains Mono', monospace !important;
   font-size: 17px !important;
+  border-width: 0px !important;
 }
 
 table {
